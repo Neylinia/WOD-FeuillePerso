@@ -1,15 +1,19 @@
-<!-- SHEET OPTIONS-->
-<input type="radio" class="attr sheetoptions settingssheet" name="attr_pagenumber" title="Settings" value="settings" />
-<span class="sheet-attr">Settings</span>
+<!-- BACKGROUND AND CONTAINER -->
+<div class="background">
 
-<br><div class="settings-spacer" style="height: 40px; display: none;"></div>
+<!-- SHEET OPTIONS & PAGE TABS-->
+<input type="radio" class="attr sheetoptions sheet-vampiresheet" name="attr_sheettype" title="Vampire" value="vampire" />
+<span class="sheet-attr">Vampire la Masquarade</span>
 
-<input type="radio" class="attr sheetoptions gametype vampiresheet" name="attr_sheettype" title="Vampire" value="vampire1" style="width: 148px;"/>
-<span class="sheet-attr" style="margin-left: -152px;">Vampire the Masquerade</span>
+<input type="radio" class="attr sheetoptions werewolfsheet" name="attr_sheettype" title="Werewolf" value="Werewolf" checked="checked" />
+<span class="sheet-attr">Loup-Garou l'Apocalypse</span>
 
-<input type="radio" class="attr sheetoptions gametype werewolfsheet" name="attr_sheettype" title="Werewolf" value="werewolf1" style="width: 163px;"/>
-<span class="sheet-attr" style="margin-left: -167px;">Werewolf the Apocalyspe</span>
 
+<br>
+<br>
+
+
+<div class="sheet-werewolf">
 
 <!-- Set up the Tabs -->
 <input type="radio" class="sheet-tab sheet-tab1" name="attr_core-tab" value="1" title="Basic" checked="checked"/> 
@@ -18,14 +22,14 @@
     <span class="sheet-tab sheet-tab2" style='line-height: 20px;'>Attributes<br>& Abilities</span>
 <input type="radio" class="sheet-tab sheet-tab3" name="attr_core-tab" value="3" title="Advantages" /> 
     <span class="sheet-tab sheet-tab3" style='line-height: 40px;'>Advantages</span>
-<input type="radio" class="sheet-tab sheet-tab4 werewolf" name="attr_core-tab" value="4" title="Forms" /> 
-    <span class="sheet-tab sheet-tab4 werewolf" style='line-height: 40px;'>Forms</span>
-<input type="radio" class="sheet-tab sheet-tab5 werewolf" name="attr_core-tab" value="5" title="Gifts, Rites & Fetishes" /> 
-    <span class="sheet-tab sheet-tab5 werewolf" style='line-height: 20px;'>Gifts, Rites<br>& Fetishes</span>
+<input type="radio" class="sheet-tab sheet-tab4" name="attr_core-tab" value="4" title="Forms" /> 
+    <span class="sheet-tab sheet-tab4" style='line-height: 40px;'>Forms</span>
+<input type="radio" class="sheet-tab sheet-tab5" name="attr_core-tab" value="5" title="Gifts, Rites & Fetishes" /> 
+    <span class="sheet-tab sheet-tab5" style='line-height: 20px;'>Gifts, Rites<br>& Fetishes</span>
 <input type="radio" class="sheet-tab sheet-tab6" name="attr_core-tab" value="6" title="Combat" /> 
     <span class="sheet-tab sheet-tab6" style='line-height: 40px;'>Combat</span>
-<input type="radio" class="sheet-tab sheet-tab7 werewolf" name="attr_core-tab" value="7" title="Pack" />
-    <span class="sheet-tab sheet-tab7 werewolf" style='line-height: 40px;'>Pack</span>
+<input type="radio" class="sheet-tab sheet-tab7" name="attr_core-tab" value="7" title="Pack" />
+    <span class="sheet-tab sheet-tab7" style='line-height: 40px;'>Pack</span>
 <input type="radio" class="sheet-tab sheet-tab99" name="attr_core-tab" value="99" title="All" />
     <span class="sheet-tab sheet-tab99" style='line-height: 40px;'>All</span>
 <!-- End Tab setup -->
@@ -3108,6 +3112,8 @@
 </rolltemplate>
 </div>
 
+</div>
+
 <script type="text/worker">
 on("change:current_form sheet:opened", function() {
     getAttrs(['current_form', 'Strength-base', 'Dexterity-base', 'Stamina-base', 'Appearance-base', 'Manipulation-base'], function(values) {
@@ -3503,3 +3509,4 @@ on("change:healthbox_1 change:healthbox_2 change:healthbox_3 change:healthbox_4 
     });
 });
 </script>
+
