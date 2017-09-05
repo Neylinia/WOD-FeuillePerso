@@ -1,3 +1,45 @@
+/*Param feuilles multiples*/
+
+.sheet-vampire,
+.sheet-werewolf,
+.sheet-settings {
+    display: none !important;
+}
+
+input.sheet-vampiresheet:checked ~ div * .sheet-vampire,
+input.sheet-werewolfsheet:checked ~ div * .sheet-werewolf,
+input.sheet-settingssheet:checked ~ div * .sheet-settings {
+    display: inline-block !important;
+}
+
+input.sheet-vampiresheet:checked ~ div * table.sheet-vampire,
+input.sheet-werewolfsheet:checked ~ div * table.sheet-werewolf,
+input.sheet-settingssheet:checked ~ div * table.sheet-settings {
+    display: table !important;
+}
+
+input.sheet-settingssheet:checked ~ div.sheet-3colrow,
+input.sheet-settingssheet:checked ~ div.sheet-skills,
+input.sheet-settingssheet:checked ~ div.sheet-othertraits,
+input.sheet-settingssheet:checked ~ div.sheet-expandedsheet,
+input.sheet-settingssheet:checked ~ div.sheet-expandedsheet2,
+input.sheet-1st:checked ~ div * .sheet-2nd,
+input.sheet-2nd:checked ~ div * .sheet-1st,
+input.sheet-pages:checked ~ .sheet-gametype,
+input.sheet-pages:checked ~ input.sheet-gametype + span,
+input.sheet-page2:checked ~ div.sheet-3colrow,
+input.sheet-page2:checked ~ div.sheet-skills,
+input.sheet-page2:checked ~ div.sheet-othertraits,
+input.sheet-page3:checked ~ div.sheet-3colrow,
+input.sheet-page3:checked ~ div.sheet-skills,
+input.sheet-page3:checked ~ div.sheet-othertraits{
+    display: none !important;
+}
+
+input.sheet-settingssheet:checked ~ div.sheet-settings-spacer {
+    display: block !important;
+}
+
 /*============= TABS =============*/
 /*----------- Tabs Setup -------------*/
 
